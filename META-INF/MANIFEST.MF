@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Jzostest
+Bundle-SymbolicName: com.ibm.cicsdev.jzostest
+Bundle-Version: 1.0.0
+Bundle-Vendor: IBM
+CICS-MainClass: com.ibm.cicsdev.jzostest.JZOSprog
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: com.ibm.cics.server,
+ com.ibm.jzos.fields
+Bundle-ClassPath: lib/EDUPGM.jar,
+ .
