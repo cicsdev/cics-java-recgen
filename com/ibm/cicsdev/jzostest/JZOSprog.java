@@ -64,11 +64,12 @@ public class JZOSprog {
 			//Build output record from updated commarea
 			cwOut = new JZOSCommareaWrapper(commarea);
 
-			// Catch specific JCICS exception
+		// Catch specific JCICS exception
 		} catch (InvalidProgramIdException e) { 
-			task.out.println("Unknown CICS Program from "+ proglink + " with: " + e.getMessage());
+			String msg = "ERROR: Invalid CICS Program {0} with msg({1})";
+			task.out.println(MessageFormat.format(msg, proglink, e.getMessage()));
 
-			// Catch any other exception and force a  rollback of CICS UOW
+		// Catch any other exception and force a  rollback of CICS UOW
 		} catch (Exception e) {
 			String msg = "ERROR: Exception on link to {0} with msg({1})";
 			task.out.println(MessageFormat.format(msg, proglink, e.getMessage()));
