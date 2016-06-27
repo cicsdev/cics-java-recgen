@@ -7,48 +7,85 @@
 /* US Government Users Restricted Rights - Use, duplication or disclosure */
 /* restricted by GSA ADP Schedule Contract with IBM Corp                  */
 /*                                                                        */ 
+
 package com.ibm.cicsdev.jzostest;
 
+
+import java.text.MessageFormat;
+
+import com.ibm.cics.server.InvalidProgramIdException;
+import com.ibm.cics.server.InvalidRequestException;
 import com.ibm.cics.server.Program;
 import com.ibm.cics.server.Task;
-import com.ibm.cicsdev.bean.CommareaWrapper; // Import of JZOS wrapper record
+import com.ibm.cicsdev.bean.JZOSCommareaWrapper;
 
 public class JZOSprog {
 
-	public static void main(String[] args)         
+	public static String proglink = "EDUPGM";  // Linked to COBOL program
+
+	public static void main(String[] args)          
 	{
-		String proglink = "EDUPGM";	   // Name of COBOL program
 
-		Task t = Task.getTask();
-		t.out.println(" - Starting JOZSprog"); 
+		// Get details about our current CICS task
+		Task task = Task.getTask();
+		task.out.println(" - Starting JOZSprog"); 
 
-		CommareaWrapper cw = new CommareaWrapper(); // Instantiate new JZOS wrapper for commarea
-		// Use the wrapper to set the input data on the commarea
-		cw.setBinaryDigit(1);
-		cw.setCharacterString("hello");
-		cw.setNumericString(1234);
-		cw.setPackedDigit(123456789);
-		cw.setSignedPacked(-100);
-		cw.setBool("1");
+		// Wrapper classes for input and output commareas
+		JZOSCommareaWrapper cwIn = null;
+		JZOSCommareaWrapper cwOut = null;
 
-		// Create program and set the name of the COBOL program to link to
-		Program p = new Program();
-		p.setName(proglink);
-		
+		// Set the input data fields
+
+		Short binarydigit = 1;
+		String charstring = "hello";
+		Short numericstring = 1234;
+		Integer packeddigit = 123456789;
+		Integer signedpackeddigit = -100;
+		String bool = "1";
+
+		cwIn = new JZOSCommareaWrapper();
+		cwIn.setBinaryDigit(binarydigit );
+		cwIn.setCharacterString(charstring );
+		cwIn.setNumericString(numericstring );
+		cwIn.setPackedDigit(packeddigit );
+		cwIn.setSignedPacked(signedpackeddigit );
+		cwIn.setBool(bool );
+
+		// Create a reference to the CICS program
+		Program prog = new Program();
+		prog.setName(proglink);	
+
+		// Create byte array for input commarea from wrapper
+		byte[] commarea = cwIn.getByteBuffer();
+
 		try {
-			p.link(cw.getByteBuffer()); // Get a byte arrage from the wrapper and pass this in as the commarea
-			
-			t.out.println("Returned from "+ proglink + " with rc("+cw.getResultCode()+") " + cw.getResultText());
+			// Link to target CICS program
+			prog.link(commarea);
 
-		} catch (Exception e) { // Generic catch for brevity, something went wrong with the link
-			t.out.println("Error from "+ proglink + "with: " + e.getMessage());
-			e.printStackTrace();
+			//Build output record from updated commarea
+			cwOut = new JZOSCommareaWrapper(commarea);
+
+			// Catch specific JCICS exception
+		} catch (InvalidProgramIdException e) { 
+			task.out.println("Unknown CICS Program from "+ proglink + "with: " + e.getMessage());
+
+			// Catch any other exception and force a  rollback of CICS UOW
+		} catch (Exception e) {
+			String msg = "ERROR: Exception on link to {0} with msg({1})";
+			task.out.println(MessageFormat.format(msg, proglink, e.getMessage()));
+			// Rollback the CICS Task 
+			try 
+			{
+				task.rollback();
+			} catch (InvalidRequestException e1) {		
+				// If this fails, then throw Runtime Exception
+				throw new RuntimeException(e1);
+			}
 		} 
 
+		String msg = "Returned from {0} with rc({1}) {2}";
+		task.out.println(MessageFormat.format(msg, proglink,cwOut.getResultCode(), cwOut.getResultText()));
+
 	}
+
 }
-
-
-
-
-
