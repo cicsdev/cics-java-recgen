@@ -10,7 +10,6 @@
 
 package com.ibm.cicsdev.jzostest;
 
-
 import java.text.MessageFormat;
 
 import com.ibm.cics.server.InvalidProgramIdException;
@@ -21,16 +20,16 @@ import com.ibm.cicsdev.bean.JZOSCommareaWrapper;
 
 public class JZOSprog {
 
-	public static String proglink = "EDUPGM";  // Linked to COBOL program
+	public static final String proglink = "EDUPGM";  // Linked to COBOL program
 
 	public static void main(String[] args)          
 	{
 
 		// Get details about our current CICS task
 		Task task = Task.getTask();
-		task.out.println(" - Starting JOZSprog"); 
+		task.out.println(" - Starting JZOSprog"); 
 
-		// Wrapper classes for input and output commareas
+		// Wrapper objects for input and output commareas
 		JZOSCommareaWrapper cwIn = null;
 		JZOSCommareaWrapper cwOut = null;
 
@@ -67,7 +66,7 @@ public class JZOSprog {
 
 			// Catch specific JCICS exception
 		} catch (InvalidProgramIdException e) { 
-			task.out.println("Unknown CICS Program from "+ proglink + "with: " + e.getMessage());
+			task.out.println("Unknown CICS Program from "+ proglink + " with: " + e.getMessage());
 
 			// Catch any other exception and force a  rollback of CICS UOW
 		} catch (Exception e) {
