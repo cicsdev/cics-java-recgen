@@ -7,6 +7,6 @@ Bundle-Vendor: IBM
 CICS-MainClass: com.ibm.cicsdev.jzostest.JZOSprog
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: com.ibm.cics.server,
- com.ibm.jzos.fields
+ com.ibm.jzos.fields;resolution:=optional
 Bundle-ClassPath: lib/EDUPGM.jar,
  .
