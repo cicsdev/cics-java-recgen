@@ -5,7 +5,7 @@ Sample CICS Java program to use a JZOS generated record to build a COMMAREA for 
 The following components are supplied in this repository.
 
 ## Java package com.ibm.cicsdev.bean
-Source code for the following Java classes is available in the src  directory 
+Source code for the following Java class is available in the src  directory 
 * JZOSCommareaWrapper.java - Generated JZOS record from EDUCPY copybook
 
 ## Java package com.ibm.cicsdev.jzostest
