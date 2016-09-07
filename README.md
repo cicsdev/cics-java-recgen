@@ -14,7 +14,7 @@ Source code for the following Java classes is available in the src  directory
 
 
 ## Supporting files
-* /etc/MANIFEST.MF - Sample OSGi bundle manifest that can be used when creating an OSGi plug-in project
+* /etc/META-INF/MANIFEST.MF - Sample OSGi bundle manifest that can be used when creating an OSGi plug-in project
 * /lib/EDUPGM.JAR - A pre-built JAR containing the JZOS generated record JZOSCommareaWrapper
 
 
