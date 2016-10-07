@@ -35,4 +35,4 @@ The sample class JZOSprog can be added to a OSGi plug-in project and deployed in
 ## Reference
 
 * More information about using this sample can be found at the following [web site] (https://developer.ibm.com/cics/2016/05/12/java-cics-using-ibmjzos/)
-* To download the COBOL EDUPGM sample see this [CICSDev Git repository] (https://github.com/cicsdev/cics-cobol-edupgm)
+* To download the COBOL EDUPGM sample see this [CICSDev Git repository] (https://github.com/cicsdev/cics-java-link)
