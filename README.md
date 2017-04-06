@@ -36,4 +36,4 @@ The sample class JZOSprog can be added to a OSGi plug-in project and deployed in
 
 ## Reference
 
-* More information about using this sample can be found at the following [web site] (https://developer.ibm.com/cics/2016/05/12/java-cics-using-ibmjzos/)
+* More information about using this sample can be found in the following CICS developer center [tutorial](https://developer.ibm.com/cics/2016/05/12/java-cics-using-ibmjzos/)
