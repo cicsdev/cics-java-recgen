@@ -11,7 +11,6 @@
 package com.ibm.cicsdev.jzostest;
 
 import java.text.MessageFormat;
-
 import com.ibm.cics.server.InvalidProgramIdException;
 import com.ibm.cics.server.InvalidRequestException;
 import com.ibm.cics.server.Program;
@@ -27,7 +26,7 @@ public class JZOSprog {
 
 		// Get details about our current CICS task
 		Task task = Task.getTask();
-		task.out.println(" - Starting JZOSprog"); 
+		task.out.println(" - Starting JZOSprog v1.1"); 
 
 		// Wrapper objects for input and output commareas
 		JZOSCommareaWrapper cwIn = null;

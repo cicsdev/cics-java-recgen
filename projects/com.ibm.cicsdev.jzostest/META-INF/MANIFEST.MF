@@ -4,9 +4,9 @@ Bundle-Name: Jzostest
 Bundle-SymbolicName: com.ibm.cicsdev.jzostest
 Bundle-Version: 1.0.0
 Bundle-Vendor: IBM
-CICS-MainClass: com.ibm.cicsdev.jzostest.JZOSprog
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Import-Package: com.ibm.cics.server,
+Import-Package: com.ibm.cics.server;version="[1.300.0,2.0.0)",
  com.ibm.jzos.fields;resolution:=optional
 Bundle-ClassPath: lib/EDUPGM.jar,
  .
+CICS-MainClass: com.ibm.cicsdev.jzostest.JZOSprog
