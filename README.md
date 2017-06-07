@@ -2,22 +2,16 @@ cics-java-jzosprog
 ================
 Sample CICS Java program to use a JZOS generated record to build a COMMAREA for linking to the CICS COBOL EDUPGM sample.
 
-The following components are supplied in this repository.
-
-## Java package com.ibm.cicsdev.bean
-Source code for the following Java class is available in the src/Java  directory 
-* JZOSCommareaWrapper.java - Generated JZOS record from EDUCPY copybook
-
-## Java package com.ibm.cicsdev.jzostest
-Source code for the following Java classes is available in the src/Java directory
-* JZOSprog.java- JCICS CICS Java program to link to EDUPGM COBOL program using generated JZOS record
-
-
 ## Supporting files
 * projects/com.ibm.cicsdev.jzostest - Eclipse OSGi plugin project 
-* projects/com.ibm.cicsdev.jzostest.cicsbundle - Eclipse OSGi plugin project 
+* projects/com.ibm.cicsdev.jzostest.cicsbundle - CICS bundle project
 * src/Cobol/EDUPGM.cbl - Sample CICS COBOL application that demonstrates the different data types that can be used in COBOL.
 * src/Cobol/EDUCPY.cbl - Copybook that describes the record structure of the CICS COMMAREA for EDUPGM
+
+
+## Java code 
+Source code for the following Java class is available in the projects directory
+* JZOSprog.java- JCICS CICS Java program to link to EDUPGM COBOL program using generated JZOS record
 
 
 
