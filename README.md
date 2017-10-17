@@ -1,6 +1,6 @@
-cics-java-jzosprog
+cics-java-recgen
 ================
-Sample CICS Java program to use a JZOS generated record to build a COMMAREA for linking to the CICS COBOL EDUPGM sample.
+Sample CICS Java program to use a record from the IBM Record Generator for Java to build a COMMAREA for linking to the CICS COBOL EDUPGM sample.
 
 ## Supporting files
 * projects/com.ibm.cicsdev.jzostest - Eclipse OSGi plugin project 
@@ -11,7 +11,7 @@ Sample CICS Java program to use a JZOS generated record to build a COMMAREA for 
 
 ## Java code 
 Source code for the following Java class is available in the projects directory
-* JZOSprog.java- JCICS CICS Java program to link to EDUPGM COBOL program using generated JZOS record
+* JZOSprog.java- JCICS CICS Java program to link to EDUPGM COBOL program using generated record
 
 
 
@@ -20,7 +20,8 @@ Source code for the following Java class is available in the projects directory
 * CICS TS V4.2 or later
 * Java SE 1.7 or later on the z/OS system
 * Java SE 1.7 or later on the workstation
-* Eclipse with WebSphere Developer Tools and CICS Explorer SDK installed
+* Eclipse with CICS Explorer SDK installed
+* IBM Record Generator for Java V3.0 
 
 
 ## Configuration
@@ -39,3 +40,4 @@ The sample project can be imported into Eclipse and deployed into a CICS OSGi JV
 ## Reference
 
 * More information about using this sample can be found in the following CICS developer center [tutorial](https://developer.ibm.com/cics/2016/05/12/java-cics-using-ibmjzos/)
+* IBM Record Generator for Java [download] (https://developer.ibm.com/mainframe/products/record-generator-for-java/)
