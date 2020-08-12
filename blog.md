@@ -173,7 +173,7 @@ job are parameterized to allow this to be scripted later.
 > com.ibm.recordgen.cobol and com.ibm.recordgen.asm are used in any
 > scripts that drive the RecordClassGenerator utility.
 
-```cobol   
+```Shell   
     //RECGEN EXEC PGM=BPXBATCH      
     //STDENV   DD *               
     JAVAHOME=/java/java71_64/J7.1_64       
@@ -203,7 +203,7 @@ and then packaging as a JAR for deployment using the Java supplied jar
 utility. You can simply add the following statements to the end of the
 BPXBATCH job step
 
-```shell
+```Shell
     $JAVAHOME/bin/javac ${DIR}/JZOSCommareaWrapper.java;                      
     $JAVAHOME/bin/jar -cvf ${PROG}.jar ${DIR}/JZOSCommareaWrapper.class;      
 ```
