@@ -40,5 +40,5 @@ The sample project can be imported into Eclipse and deployed into a CICS OSGi JV
 
 ## Reference
 
-* More information about using this sample can be found in the following CICS developer center [tutorial](https://developer.ibm.com/cics/2016/05/12/java-cics-using-ibmjzos/)
+* More information about using this sample can be found in the following tutorial [Building Java records from COBOL with the IBM Record Generator for Java](blog.md)
 * IBM Record Generator for Java [download](https://developer.ibm.com/mainframe/products/record-generator-for-java/)
