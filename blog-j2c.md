@@ -28,7 +28,7 @@ in CICS.
 
 > **Note:** an alternative solution to J2C is to use the IBM Record
 Generator for Java which supports COBOL and Assembler and is described
-further in this developer center tutorial [Building Java records from
+further in this tutorial [Building Java records from
 COBOL with the IBM Record Generator for Java](blog.md).
 
 The J2C tooling is now also available in IBM Developer for z/OS Enterprise Edition v14.
