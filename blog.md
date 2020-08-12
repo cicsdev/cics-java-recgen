@@ -95,7 +95,7 @@ translate and compile job DFHZITCL.
 
  
 
-```
+```cobol
     //ASMCOBJ JOB (H251620-TSOO),CLASS=A,MSGCLASS=T,NOTIFY=&SYSUID,
     // MSGLEVEL=(1,1),REGION=500M
     //  SET PROG='EDUPGM'                                               
@@ -173,7 +173,8 @@ job are parameterized to allow this to be scripted later.
 > com.ibm.recordgen.cobol and com.ibm.recordgen.asm are used in any
 > scripts that drive the RecordClassGenerator utility.
 
-```    //RECGEN EXEC PGM=BPXBATCH      
+```    
+    //RECGEN EXEC PGM=BPXBATCH      
     //STDENV   DD *               
     JAVAHOME=/java/java71_64/J7.1_64       
     PKG=com.ibm.cicsdev.bean               
@@ -202,7 +203,7 @@ and then packaging as a JAR for deployment using the Java supplied jar
 utility. You can simply add the following statements to the end of the
 BPXBATCH job step
 
-```
+```shell
     $JAVAHOME/bin/javac ${DIR}/JZOSCommareaWrapper.java;                      
     $JAVAHOME/bin/jar -cvf ${PROG}.jar ${DIR}/JZOSCommareaWrapper.class;      
 ```
@@ -337,7 +338,7 @@ the code show below, which will make a `JCICS Program.link()` call to
 our EDUPGM CICS COBOL program. Alternatively you can download the sample
 code [here](https://github.com/cicsdev/cics-java-jzosprog)
 
-``` {.brush: .java; .gutter: .false; .title: .; .notranslate title=""}
+```java
 public class JZOSprog {
 
     public static String proglink = "EDUPGM";  // Linked to COBOL program
@@ -538,3 +539,4 @@ Change history
 - 01/Aug/17 -- Clarified program definitions
 - 29/Sept/17 -- Updated for launch of IBM Record Generator for Java V3.0
 - 16/Oct/17 -- Updated repo name
+- 12/Aug/19 -- Migrated blog to GitHub
