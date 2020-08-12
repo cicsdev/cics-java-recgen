@@ -15,7 +15,7 @@ to create Java classes from COBOL data structures for use as input or
 output types in a CICS Java program that interacts with record based
 language structures.*
 
-J2C Java Data Bindings
+## J2C Java Data Bindings
 
 The J2C tooling in RAD is provided through a set of wizards called the
 *CICS and IMS Java Data Bindings*. They support the importing of data
@@ -26,11 +26,10 @@ and numeric data types can be specified to ensure that data conversion
 is correctly performed when passing data from Java to the EBCDIC runtime
 in CICS.
 
-Note an alternative solution to J2C is to use the IBM Record
+> **Note:** an alternative solution to J2C is to use the IBM Record
 Generator for Java which supports COBOL and Assembler and is described
-further in this developer center article [Building Java records from
-COBOL with the IBM Record Generator for
-Java](https://developer.ibm.com/cics/2016/05/12/java-cics-using-ibmjzos/).
+further in this developer center tutorial [Building Java records from
+COBOL with the IBM Record Generator for Java](blog.md).
 
 The J2C tooling is now also available in IBM Developer for z/OS Enterprise Edition v14.
 For more details, see [https://www.ibm.com/support/pages/node/713179](https://www.ibm.com/support/pages/node/713179).
@@ -64,7 +63,7 @@ EDUCPY which you can download from this CICSDev Git
 provides the following DFHCOMMAREA structure which includes the most
 common types of COBOL data elements.
 
-``` {.brush: .plain; .gutter: .false; .title: .; .notranslate title=""}
+```cobol
        01   DFHCOMMAREA.
            03  DATA-PAYLOAD.
               05 BINARY-DIGIT            PIC 9(4)       COMP.
@@ -184,6 +183,7 @@ required packages
 The manifest can be found in at `META-INF/MANIFEST` and should be
 similar to the example below.
 
+```
     Manifest-Version: 1.0
     Bundle-ManifestVersion: 2
     Bundle-Name: j2c
@@ -194,6 +194,7 @@ similar to the example below.
      com.ibm.etools.marshall.util,
      com.ibm.etools.marshall.util.bidi
     Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+```
 
 #### 2.3.2 Adding connector.jar
 
@@ -207,6 +208,7 @@ Validate the bundle manifest for the wrapper bundle to ensure that the
 required package `javax.resource.cci ` is exported. The manifest should
 be similar to the example below.
 
+```
     Manifest-Version: 1.0
     Bundle-ManifestVersion: 2
     Bundle-Name: Resource
@@ -218,6 +220,7 @@ be similar to the example below.
      javax.resource.spi,
      javax.resource.spi.security
     Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+ ```
 
 #### 2.3.3 Define OSGi Import Package statements
 
@@ -227,10 +230,11 @@ package imports for the J2C components can be resolved by adding the
 following OSGi `Import-Package` statements to the OSGi bundle manifest
 in our com.ibm.cicsdev.j2ctest Plug-in project.
 
+```
     Import-Package: com.ibm.etools.marshall,
      com.ibm.etools.marshall.util,
      javax.resource.cci
-
+ ```
 
 ### 3.1 Creating a CICS Java application
 
@@ -240,7 +244,7 @@ make a JCICS `Program.link()` call to our EDUPGM CICS COBOL program.
 Alternatively you can download the full sample code here at the [CICSDev
 GitHub](https://github.com/cicsdev/cics-java-j2cprog)
 
-``` {.brush: .java; .gutter: .false; .title: .; .notranslate title=""}
+```java
 public class J2Cprog {
 
     public final static String proglink = "EDUPGM"; // Linked to COBOL program
@@ -330,10 +334,12 @@ on JCICS package versioning see
 Knowledge Center topic. Your resulting manifest should now contain the
 following lines:
 
+```
     Import-Package: com.ibm.cics.server;version="[1.300.0,2.0.0)",
      com.ibm.etools.marshall,
      com.ibm.etools.marshall.util,
      javax.resource.cci
+ ```
 
  
 
@@ -342,6 +348,7 @@ register a MainClass service for our com.ibm.cicsdev.j2ctest.J2Cprog
 class. This will allow the Java class to be LINKed to using a CICS
 program definition. Your manifest should now look similar to this:
 
+```
     Manifest-Version: 1.0
     Bundle-ManifestVersion: 2
     Bundle-Name: J2ctest
@@ -354,6 +361,7 @@ program definition. Your manifest should now look similar to this:
      com.ibm.etools.marshall.util,
      javax.resource.cci
     CICS-MainClass: com.ibm.cicsdev.j2ctest.J2Cprog
+```
 
  
 
@@ -375,8 +383,7 @@ as a JAR. Transfer this to z/OS in binary mode and deploy into the OSGi
 JVM server as a middleware bundle using the OSGI_BUNDLES JVM server
 property.
 
-The
-[OSGI_BUNDLES](http://www.ibm.com/support/knowledgecenter/SSGMCP_5.3.0/com.ibm.cics.ts.java.doc/topics/dfha2_jvmprofile_server_options.html)
+The [OSGI_BUNDLES](http://www.ibm.com/support/knowledgecenter/SSGMCP_5.3.0/com.ibm.cics.ts.java.doc/topics/dfha2_jvmprofile_server_options.html)
 JVM server property is a CICS JVM server profile option used for adding
 bundles to the OSGi framework in order to implement shared system
 functions. The following is an example definition assuming the exported
@@ -427,12 +434,5 @@ successfully used to marshall the data in the COMMAREA.
 References
 ----------
 
--   developerWorks -- [Generating a J2C bean using the J2C Tools in
-    RAD](https://www.ibm.com/developerworks/rational/library/06/1212_nigul/index.html)
--   CICS Develeper Center -- [Building Java records from COBOL with the
-    IBM Record Generator for
-    Java](https://developer.ibm.com/cics/2016/05/12/java-cics-using-ibmjzos/)
--   CICS Developer Center -- [Configuring OSGi Package
-    Imports](https://developer.ibm.com/cics/2016/01/29/java-for-cics-configuring-package-imports/)
--   RAD Knowledge Center -- [Connecting to enterprise information
-    systems](http://www.ibm.com/support/knowledgecenter/SSRTLW_9.5.0/com.ibm.j2c.doc/topics/cresadapoverv.html)
+-   developerWorks -- [Generating a J2C bean using the J2C Tools in RAD](https://www.ibm.com/developerworks/rational/library/06/1212_nigul/index.html)
+-   RAD Knowledge Center -- [Connecting to enterprise information systems](http://www.ibm.com/support/knowledgecenter/SSRTLW_9.5.0/com.ibm.j2c.doc/topics/cresadapoverv.html)
