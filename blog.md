@@ -539,4 +539,4 @@ Change history
 - 01/Aug/17 -- Clarified program definitions
 - 29/Sept/17 -- Updated for launch of IBM Record Generator for Java V3.0
 - 16/Oct/17 -- Updated repo name
-- 12/Aug/19 -- Migrated blog to GitHub
+- 12/Aug/20 -- Migrated blog to GitHub
