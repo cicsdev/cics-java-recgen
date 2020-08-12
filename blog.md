@@ -173,7 +173,7 @@ job are parameterized to allow this to be scripted later.
 > com.ibm.recordgen.cobol and com.ibm.recordgen.asm are used in any
 > scripts that drive the RecordClassGenerator utility.
 
-```jcl    
+```cobol   
     //RECGEN EXEC PGM=BPXBATCH      
     //STDENV   DD *               
     JAVAHOME=/java/java71_64/J7.1_64       
