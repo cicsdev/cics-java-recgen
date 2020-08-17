@@ -29,7 +29,7 @@ for mapping byte array fields into Java data types.
 ![Record Generator](blog-graphics/RecGen.png)
 
 > **Note:** IBM Record Generator for Java V3.0 is a new [IBM program
-> product](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?infotype=an&subtype=ca&supplier=897&letternum=ENUS217-295)
+> product](https://www.ibm.com/common/ssi/cgi-bin/ssialias?infotype=an&subtype=ca&supplier=897&letternum=ENUS217-295)
 > generally available as of 29th Sept 2017 and supersedes the IBM
 > alphaWorks version of the JZOS Record Generator V2.4.6, which is now
 > withdrawn. The Record Generator for Java, V3.0, provides the following
@@ -48,7 +48,7 @@ for mapping byte array fields into Java data types.
 >     Center](https://www.ibm.com/support/knowledgecenter/SSMQ4D_3.0.0/documentation/welcome.html)
 >
 > The Record Generator for Java V3.0 is freely available to
-> [download](https://developer.ibm.com/mainframe/products/record-generator-for-java/)
+> [download](https://ibm.github.io/mainframe-downloads/IBM-Record-Generator-for-Java.html)
 > for all users of z/OS V2.1, or later. License redistribution rights
 > are provided for deployment to non-z/OS platforms to support
 > distributed development and build.
@@ -70,7 +70,7 @@ The following steps will be covered in this article
 First of all you will need to perform the following prerequisites.
 
 -   Download the Record Generator zip archive from the [download
-    site](https://developer.ibm.com/mainframe/products/record-generator-for-java)
+    site](https://ibm.github.io/mainframe-downloads/IBM-Record-Generator-for-Java.html)
 -   Extract ibm-recgen.jar and transfer this to a directory on your zFS
     as this will be required by the batch job to generate records from
     the COBOL source.
@@ -505,7 +505,7 @@ successfully used to marshall the data in the COMMAREA.
 References
 ----------
 
--   IBM Record Generator -- [Download](https://developer.ibm.com/mainframe/products/record-generator-for-java/)
+-   IBM Record Generator -- [Download](https://ibm.github.io/mainframe-downloads/IBM-Record-Generator-for-Java.html)
 -   Sample code available in the
     [cics-java-recgen](https://github.com/cicsdev/cics-java-recgen) Git
     repository
@@ -540,3 +540,4 @@ Change history
 - 29/Sept/17 -- Updated for launch of IBM Record Generator for Java V3.0
 - 16/Oct/17 -- Updated repo name
 - 12/Aug/20 -- Migrated blog to GitHub
+- 17/Aug/20 -- Update download links
