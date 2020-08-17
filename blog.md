@@ -505,7 +505,7 @@ successfully used to marshall the data in the COMMAREA.
 References
 ----------
 
--   IBM Record Generator -- Download
+-   IBM Record Generator -- [Download](https://developer.ibm.com/mainframe/products/record-generator-for-java/)
 -   Sample code available in the
     [cics-java-recgen](https://github.com/cicsdev/cics-java-recgen) Git
     repository
