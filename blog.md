@@ -505,26 +505,26 @@ successfully used to marshall the data in the COMMAREA.
 References
 ----------
 
--   IBM Record Generator -- [Download](https://ibm.github.io/mainframe-downloads/IBM-Record-Generator-for-Java.html)
+-   IBM Record Generator - [Download](https://ibm.github.io/mainframe-downloads/IBM-Record-Generator-for-Java.html)
 -   Sample code available in the
     [cics-java-recgen](https://github.com/cicsdev/cics-java-recgen) Git
     repository
--   JZOS for z/OS SDKs --
+-   JZOS for z/OS SDKs -
     [Cookbook](https://www.ibm.com/marketing/iwm/iwm/web/reg/download.do?source=zossdkcookbook&S_PKG=dl)
 -   IBM Knowledge Center -- [IBM Record Generator for Java
     V3.0.0](https://www.ibm.com/support/knowledgecenter/SSMQ4D_3.0.0/documentation/welcome.html)
--   IBM Redbook -- [Java Stand-alone Applications on z/OS Volume
+-   IBM Redbook - [Java Stand-alone Applications on z/OS Volume
     II](http://www.redbooks.ibm.com/abstracts/sg247291.html)
--   JZOS API Toolkit --
+-   JZOS API Toolkit -
     [Javadoc](https://www.ibm.com/support/knowledgecenter/en/SSYKE2_8.0.0/com.ibm.java.zsecurity.api.80.doc/com.ibm.jzos/overview-summary.html)
--   Requests for Enhancements -- [RFE
+-   Requests for Enhancements - [RFE
     Community](https://www.ibm.com/developerworks/rfe/execute?use_case=changeRequestLanding&BRAND_ID=352&PROD_ID=1716)
 
 **Note:** An alternative data marshaling solution to IBM Record
 Generator for Java is the Rational J2C Tools which are described further
 in this developer center article [Generating Java Records from COBOL
 with Rational
-J2C](https://developer.ibm.com/cics/2016/06/29/java-cics-using-rational-j2c/).
+J2C](https://github.com/cicsdev/cics-java-recgen/blob/master/blog-j2c.md).
 
 ------------------------------------------------------------------------
 
