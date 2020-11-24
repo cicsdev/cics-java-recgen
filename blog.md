@@ -472,20 +472,20 @@ program definition. Your manifest should now look similar to this
 The application is now ready to be tested, and can simply be deployed
 into a CICS OSGi JVM server using a CICS Bundle project as follows:
 
-i.  Create a CICS bundle project in Eclipse and add the OSGi bundle
+1.  Create a CICS bundle project in Eclipse and add the OSGi bundle
     project using the menu **New -\> OSGi Bundle Project Include**
-ii. Deploy to zFS using the menu **Export Bundle Project to z/OS UNIX
+1.  Deploy to zFS using the menu **Export Bundle Project to z/OS UNIX
     File System**
-iii. Create a CICS BUNDLE definition referencing this zFS location and
+1.  Create a CICS BUNDLE definition referencing this zFS location and
      install this
-iv. Create a CICS PROGRAM definition for the Java application called
+1.  Create a CICS PROGRAM definition for the Java application called
     JZOSPROG. This should name the CICS-MainClass:
     `com.ibm.cicsdev.jzostest.JZOSprog` in the JVMClass attribute
-v.  Optionally create a PROGRAM definition for the COBOL EDUPGM if you
+1.  Optionally create a PROGRAM definition for the COBOL EDUPGM if you
     are not using program autoinstall
-vi. Create a transaction definition referencing the JZOSPROG program
+1. Create a transaction definition referencing the JZOSPROG program
     definition if this is to be run from a 3270 terminal
-vii. Install the program and transaction definitions
+1. Install the program and transaction definitions
 
 When invoked our Java class JZOSprog will link to the COBOL EDUPGM using
 the CommareaWrapper classes to marshall the input to the required COBOL
