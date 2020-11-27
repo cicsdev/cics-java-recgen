@@ -522,9 +522,7 @@ References
 
 **Note:** An alternative data marshaling solution to IBM Record
 Generator for Java is the Rational J2C Tools which are described further
-in this developer center article [Generating Java Records from COBOL
-with Rational
-J2C](https://github.com/cicsdev/cics-java-recgen/blob/master/blog-j2c.md).
+in this tutorial [Generating Java Records from COBOL with Rational J2C](https://github.com/cicsdev/cics-java-recgen/blob/master/blog.md).
 
 ------------------------------------------------------------------------
 
@@ -541,3 +539,4 @@ Change history
 - 16/Oct/17 -- Updated repo name
 - 12/Aug/20 -- Migrated blog to GitHub
 - 17/Aug/20 -- Update download links
+- 27/Nov/20 -- Move J2C tutorial to its own repo
