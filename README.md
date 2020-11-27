@@ -10,7 +10,7 @@ Sample CICS Java program to use a record from the IBM Record Generator for Java 
 
 ## Tutorials
 * [Building Java records from COBOL with the IBM Record Generator for Java](blog.md)
-* [Generating Java Records from COBOL with Rational J2C Tools](blog-j2c.md)
+* [Generating Java Records from COBOL with Rational J2C Tools](https://github.com/cicsdev/cics-java-j2cprog/blob/master/blog.md)
 
 
 ## Java code 
