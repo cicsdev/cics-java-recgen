@@ -8,10 +8,9 @@ Sample CICS Java program to use a record from the IBM Record Generator for Java 
 * [`EDUPGM.cbl`](src/Cobol/EDUPGM.cbl) - Sample CICS COBOL application that demonstrates the different data types that can be used in COBOL.
 * [`EDUCPY.cbl`](src/Cobol/EDUCPY.cbl) - Copybook that describes the record structure of the CICS COMMAREA for EDUPGM
 
-## Tutorials
-* [Building Java records from COBOL with the IBM Record Generator for Java](blog.md)
-* [Generating Java Records from COBOL with Rational J2C Tools](https://github.com/cicsdev/cics-java-j2cprog/blob/master/blog.md)
-
+## Reference
+* Blog - [Building Java records from COBOL with the IBM Record Generator for Java](blog.md)
+* IBM Record Generator for Java [download](https://ibm.github.io/mainframe-downloads/IBM-Record-Generator-for-Java.html)
 
 ## Java code 
 Source code for the following Java class is available in the projects directory
@@ -42,6 +41,4 @@ The sample project can be imported into Eclipse and deployed into a CICS OSGi JV
 
 
 
-## Reference
 
-* IBM Record Generator for Java [download](https://ibm.github.io/mainframe-downloads/IBM-Record-Generator-for-Java.html)
