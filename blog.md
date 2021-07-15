@@ -1,7 +1,9 @@
 
 
-Building Java records from COBOL with the IBM Record Generator for Java
+ARCHIVED - Building Java records from COBOL with the IBM Record Generator for Java
 =======================================================================
+
+> This blog is now archived, and the latest version is now available at [ibm.developer.com](https://developer.ibm.com/components/ibmz/tutorials/build-java-records-from-cobol-with-ibm-record-generator/)
 
 Author: Phil Wakelinn
 
@@ -540,3 +542,4 @@ Change history
 - 12/Aug/20 -- Migrated blog to GitHub
 - 17/Aug/20 -- Update download links
 - 27/Nov/20 -- Move J2C tutorial to its own repo
+- 15/Jul/21 -- Article frozen and moved to developer.ibm.com
