@@ -9,7 +9,7 @@ Sample CICS Java program to use a record from the IBM Record Generator for Java 
 * [`EDUCPY.cbl`](src/Cobol/EDUCPY.cbl) - Copybook that describes the record structure of the CICS COMMAREA for EDUPGM
 
 ## Reference
-* Blog - [Building Java records from COBOL with the IBM Record Generator for Java](blog.md)
+* Blog - [Building Java records from COBOL with the IBM Record Generator for Java](https://developer.ibm.com/tutorials/build-java-records-from-cobol-with-ibm-record-generator/)
 * IBM Record Generator for Java [download](https://ibm.github.io/mainframe-downloads/IBM-Record-Generator-for-Java.html)
 
 ## Java code 
