@@ -26,14 +26,12 @@ public class JZOSprog {
 
 		// Get details about our current CICS task
 		Task task = Task.getTask();
-		task.out.println(" - Starting JZOSprog v1.1"); 
-
+                task.getOut().println(" - Starting JOZSprog”);
 		// Wrapper objects for input and output commareas
 		JZOSCommareaWrapper cwIn = null;
 		JZOSCommareaWrapper cwOut = null;
 
 		// Set the input data fields
-
 		Short binarydigit = 1;
 		String charstring = "hello";
 		Short numericstring = 1234;
@@ -66,12 +64,12 @@ public class JZOSprog {
 		// Catch specific JCICS exception
 		} catch (InvalidProgramIdException e) { 
 			String msg = "ERROR: Invalid CICS Program {0} with msg({1})";
-			task.out.println(MessageFormat.format(msg, proglink, e.getMessage()));
+			task.getOut().println(MessageFormat.format(msg, proglink, e.getMessage()));
 
-		// Catch any other exception and force a  rollback of CICS UOW
+		// Catch any other exception and force a rollback of CICS UOW
 		} catch (Exception e) {
 			String msg = "ERROR: Exception on link to {0} with msg({1})";
-			task.out.println(MessageFormat.format(msg, proglink, e.getMessage()));
+			task.getOut().println(MessageFormat.format(msg, proglink, e.getMessage()));
 			// Rollback the CICS Task 
 			try 
 			{
@@ -83,7 +81,7 @@ public class JZOSprog {
 		} 
 
 		String msg = "Returned from {0} with rc({1}) {2}";
-		task.out.println(MessageFormat.format(msg, proglink,cwOut.getResultCode(), cwOut.getResultText()));
+		task.getOut().println(MessageFormat.format(msg, proglink,cwOut.getResultCode(), cwOut.getResultText()));
 
 	}
 
