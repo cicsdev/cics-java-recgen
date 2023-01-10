@@ -26,7 +26,7 @@ public class JZOSprog {
 
 		// Get details about our current CICS task
 		Task task = Task.getTask();
-                task.getOut().println(" - Starting JOZSprog”);
+                task.getOut().println(" - Starting JOZSprog");
 		// Wrapper objects for input and output commareas
 		JZOSCommareaWrapper cwIn = null;
 		JZOSCommareaWrapper cwOut = null;
