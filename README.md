@@ -23,10 +23,10 @@ The generated record JAR file EDUPGM.jar is supplied in the [`lib`](projects/com
 
 ## Pre-reqs
 
-* CICS TS V5.4 or later
-* Java SE 1.8 or later on the workstation
+* CICS TS V5.5 or later
+* Java SE 17 or later on the workstation
 * Eclipse with the IBM CICS SDK for Java, or any IDE that supports usage of the Maven Central artifact [com.ibm.cics:com.ibm.cics.server.](https://search.maven.org/artifact/com.ibm.cics/com.ibm.cics.server)
-* IBM Record Generator for Java V3.0 
+* IBM Record Generator for Java V3.0 or later
 
 
 ## Configuration
