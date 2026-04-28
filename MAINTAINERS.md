@@ -1,5 +1,6 @@
 # Maintainers
 
-- Phil Wakelin [@PhilWakelin](https://github.com/PhilWakelin)
+- Phil Wakelin @PhilWakelin
+- Tony Fitzgerald @fitzget
 
-*Last reviewed:* 2022
+*Last reviewed:* April 2026

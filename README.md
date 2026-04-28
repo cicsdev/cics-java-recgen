@@ -40,6 +40,9 @@ The sample project can be imported into Eclipse and deployed into a CICS OSGi JV
 4. Create a CICS  bundle defintion, setting the bundle directory attribute to the zFS location you just exported to, and install it. 
 
 
+## Usage terms
+By downloading, installing, and/or using this sample, you acknowledge that separate license terms may apply to any dependencies that might be required as part of the installation and/or execution and/or automated build of the sample, including the following IBM license terms for relevant IBM components:
 
+• IBM CICS development components terms: https://www.ibm.com/support/customer/csol/terms/?id=L-ACRR-BBZLGX
 
 

@@ -15,21 +15,28 @@
       *       MISSION : Copy book defining interface for EDUPGM        *
       *       HISTORY :                                                *
       *        16/06/16  Added 01 level DFHCOMMAREA                    *
+      *        28/04/26  Removed 01 level DFHCOMMAREA for containers   *
       *----------------------------------------------------------------*
 
-       01   DFHCOMMAREA.
            03  DATA-PAYLOAD.
-              05 BINARY-DIGIT            PIC 9(4)       COMP.
-              05 CHARACTER-STRING        PIC X(30).
-              05 NUMERIC-STRING          PIC 9(18).
-              05 PACKED-DIGIT            PIC 9(15)      COMP-3.
-              05 PACKED-DIGIT-WITH-COMMA PIC 9(12)V9(3) COMP-3.
-              05 SIGNED-PACKED           PIC S9(12)     COMP-3.
-              05 BOOL                    PIC X.
-                 88 BOOL-FALSE           value X'00'.
-                 88 BOOL-TRUE            value X'01' through X'FF'.
-              05 RESULT.
-                 09 RESULT-CODE          PIC S9(5)      VALUE +0.
-                 09 RESULT-TEXT          PIC X(25).
+              05 BINARY-DIGIT             PIC 9(4)       COMP.
+              05 CHARACTER-STRING         PIC X(30).
+              05 CHAR-S.
+                 07 STRING1               PIC X(10).
+                 07 STRING2               PIC X(20).
+              05 CHAR-S2 REDEFINES CHAR-S.
+                 07 STRING3               PIC X(20).
+                 07 STRING4               PIC X(10).
 
+              05 NUMERIC-STRING           PIC 9(18).
+              05 PACKED-DIGIT             PIC 9(15)      COMP-3.
+              05 PACKED-DIGIT-WITH-COMMA  PIC 9(12)V9(3) COMP-3.
+              05 SIGNED-PACKED            PIC S9(12)     COMP-3.
+              05 BOOL                     PIC X.
+                 88 BOOL-FALSE            value X'00'.
+                 88 BOOL-TRUE             value X'01' through X'FF'.
+              05 RESULT.
+                 09 RESULT-CODE           PIC S9(5)      VALUE +0.
+                 09 RESULT-TEXT           PIC X(25).
+           03 POINTER-DATA USAGE IS POINTER.
       *----------------------------------------------------------------*	
