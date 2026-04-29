@@ -7,7 +7,7 @@ Bundle-Vendor: IBM
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Import-Package: com.ibm.cics.server;version="[1.300.0,3.0.0)",
  com.ibm.jzos.fields;resolution:=optional
-Bundle-ClassPath: lib/EDUPGM.jar,
+Bundle-ClassPath: lib/cics-java-jcics-edupgm-1.0.jar,
  .
 CICS-MainClass: com.ibm.cicsdev.jzostest.JZOSprog
 Automatic-Module-Name: com.ibm.cicsdev.jzostest
