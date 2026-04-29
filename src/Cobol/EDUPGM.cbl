@@ -8,7 +8,7 @@
       *----------------------------------------------------------------*
       *       AUTHOR  :  Giovanni Creato/Italy/IBM                     *
       *       DATE    :  16 / 04 / 2016                                *
-      *       VERSION :  1.1                                           *
+      *       VERSION :  1.0.1                                         *
       *       HISTORY :                                                *
       *        16/06/16  Moved 01 level DFHCOMMAREA to EDUCPY          *
       *        28/04/26  Removed 01 level DFHCOMMAREA for containers   *
