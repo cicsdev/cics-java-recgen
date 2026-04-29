@@ -18,7 +18,7 @@ Sample CICS Java program to use a record from the IBM Record Generator for Java 
 Source code for the following Java class is available in the projects directory
 * [`JZOSprog.java`](projects/com.ibm.cicsdev.jzostest/src/com/ibm/cicsdev/jzostest/JZOSprog.java)- JCICS CICS Java program to link to EDUPGM COBOL program using a generated record
 
-The generated record JAR file EDUPGM.jar is supplied in the [`lib`](projects/com.ibm.cicsdev.jzostest/lib) directory of the Eclipse OSGi plugin project 
+The generated record JAR file cics-java-jcics-edupgm-1.0.jar is supplied in the [`lib`](projects/com.ibm.cicsdev.jzostest/lib) directory of the Eclipse OSGi plugin project 
 
 
 ## Pre-reqs
