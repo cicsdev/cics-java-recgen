@@ -19,14 +19,14 @@ import com.ibm.cicsdev.bean.JZOSCommareaWrapper;
 
 public class JZOSprog {
 
-	public static final String proglink = "EDUPGM";  // Linked to COBOL program
+	public static final String PROGLINK = "EDUPGM";  // Linked to COBOL program
 
 	public static void main(String[] args)          
 	{
 
 		// Get details about our current CICS task
 		Task task = Task.getTask();
-                task.getOut().println(" - Starting JOZSprog");
+        task.out.println(" - Starting JOZSprog");
 		// Wrapper objects for input and output commareas
 		JZOSCommareaWrapper cwIn = null;
 		JZOSCommareaWrapper cwOut = null;
@@ -49,7 +49,7 @@ public class JZOSprog {
 
 		// Create a reference to the CICS program
 		Program prog = new Program();
-		prog.setName(proglink);	
+		prog.setName(PROGLINK);	
 
 		// Create byte array for input commarea from wrapper
 		byte[] commarea = cwIn.getByteBuffer();
@@ -64,12 +64,12 @@ public class JZOSprog {
 		// Catch specific JCICS exception
 		} catch (InvalidProgramIdException e) { 
 			String msg = "ERROR: Invalid CICS Program {0} with msg({1})";
-			task.getOut().println(MessageFormat.format(msg, proglink, e.getMessage()));
+			task.out.println(MessageFormat.format(msg, PROGLINK, e.getMessage()));
 
 		// Catch any other exception and force a rollback of CICS UOW
 		} catch (Exception e) {
 			String msg = "ERROR: Exception on link to {0} with msg({1})";
-			task.getOut().println(MessageFormat.format(msg, proglink, e.getMessage()));
+			task.out.println(MessageFormat.format(msg, PROGLINK, e.getMessage()));
 			// Rollback the CICS Task 
 			try 
 			{
@@ -81,7 +81,7 @@ public class JZOSprog {
 		} 
 
 		String msg = "Returned from {0} with rc({1}) {2}";
-		task.getOut().println(MessageFormat.format(msg, proglink,cwOut.getResultCode(), cwOut.getResultText()));
+		task.out.println(MessageFormat.format(msg, PROGLINK,cwOut.getResultCode(), cwOut.getResultText()));
 
 	}
 

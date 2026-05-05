@@ -18,15 +18,15 @@ Sample CICS Java program to use a record from the IBM Record Generator for Java 
 Source code for the following Java class is available in the projects directory
 * [`JZOSprog.java`](projects/com.ibm.cicsdev.jzostest/src/com/ibm/cicsdev/jzostest/JZOSprog.java)- JCICS CICS Java program to link to EDUPGM COBOL program using a generated record
 
-The generated record JAR file EDUPGM.jar is supplied in the [`lib`](projects/com.ibm.cicsdev.jzostest/lib) directory of the Eclipse OSGi plugin project 
+The generated record JAR file cics-java-jcics-edupgm-1.0.jar is supplied in the [`lib`](projects/com.ibm.cicsdev.jzostest/lib) directory of the Eclipse OSGi plugin project 
 
 
 ## Pre-reqs
 
-* CICS TS V5.4 or later
-* Java SE 1.8 or later on the workstation
+* CICS TS V5.5 or later
+* Java SE 17 or later on the workstation
 * Eclipse with the IBM CICS SDK for Java, or any IDE that supports usage of the Maven Central artifact [com.ibm.cics:com.ibm.cics.server.](https://search.maven.org/artifact/com.ibm.cics/com.ibm.cics.server)
-* IBM Record Generator for Java V3.0 
+* IBM Record Generator for Java V3.0 or later
 
 
 ## Configuration
@@ -40,6 +40,9 @@ The sample project can be imported into Eclipse and deployed into a CICS OSGi JV
 4. Create a CICS  bundle defintion, setting the bundle directory attribute to the zFS location you just exported to, and install it. 
 
 
+## Usage terms
+By downloading, installing, and/or using this sample, you acknowledge that separate license terms may apply to any dependencies that might be required as part of the installation and/or execution and/or automated build of the sample, including the following IBM license terms for relevant IBM components:
 
+• IBM CICS development components terms: https://www.ibm.com/support/customer/csol/terms/?id=L-ACRR-BBZLGX
 
 

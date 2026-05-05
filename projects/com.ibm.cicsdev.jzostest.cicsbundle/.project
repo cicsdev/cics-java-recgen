@@ -10,15 +10,19 @@
 			<arguments>
 				<dictionary>
 					<key>bundleID</key>
+					<value>com.ibm.cicsdev.jzostest.cicsbundle</value>
 				</dictionary>
 				<dictionary>
 					<key>majorVersion</key>
+					<value>1</value>
 				</dictionary>
 				<dictionary>
 					<key>microVersion</key>
+					<value>1</value>
 				</dictionary>
 				<dictionary>
 					<key>minorVersion</key>
+					<value>0</value>
 				</dictionary>
 			</arguments>
 		</buildCommand>

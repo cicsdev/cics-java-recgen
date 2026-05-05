@@ -10,14 +10,14 @@
       *                                                                *
       *       AUTHOR  :  Giovanni Creato                               *
       *       DATE    :  20 / 11 / 2014                                *
-      *       VERSION :  1.0                                           *
+      *       VERSION :  1.0.1                                         *
       *                                                                *
       *       MISSION : Copy book defining interface for EDUPGM        *
       *       HISTORY :                                                *
       *        16/06/16  Added 01 level DFHCOMMAREA                    *
+      *        28/04/26  Removed 01 level DFHCOMMAREA for containers   *
       *----------------------------------------------------------------*
 
-       01   DFHCOMMAREA.
            03  DATA-PAYLOAD.
               05 BINARY-DIGIT            PIC 9(4)       COMP.
               05 CHARACTER-STRING        PIC X(30).
@@ -29,7 +29,7 @@
                  88 BOOL-FALSE           value X'00'.
                  88 BOOL-TRUE            value X'01' through X'FF'.
               05 RESULT.
-                 09 RESULT-CODE          PIC S9(5)      VALUE +0.
+                 09 RESULT-CODE          PIC S9(5).
                  09 RESULT-TEXT          PIC X(25).
-
+           03 POINTER-DATA USAGE IS POINTER.
       *----------------------------------------------------------------*	

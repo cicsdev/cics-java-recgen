@@ -8,9 +8,10 @@
       *----------------------------------------------------------------*
       *       AUTHOR  :  Giovanni Creato/Italy/IBM                     *
       *       DATE    :  16 / 04 / 2016                                *
-      *       VERSION :  1.1                                           *
+      *       VERSION :  1.0.1                                         *
       *       HISTORY :                                                *
       *        16/06/16  Moved 01 level DFHCOMMAREA to EDUCPY          *
+      *        28/04/26  Removed 01 level DFHCOMMAREA for containers   *
       *----------------------------------------------------------------*
       * Description                                                    *
       *                                                                *
@@ -36,7 +37,6 @@
            03 NN.
               05 pic x(10)   value 'EDUPGM  : '.
 
-
        01 WS-VARIABLES.
            03 DISPLAYABLE-NUMERIC             PIC -z(3)9.
            03 REQUIRED-CA-LEN                 PIC S9(4)      VALUE +0.
@@ -49,7 +49,8 @@
                  88 Switch-condition-2 value "B".
 
        LINKAGE SECTION.
-           COPY EDUCPY.
+       01 DFHCOMMAREA.
+            COPY EDUCPY.
       *----------------------------------------------------------------*
        PROCEDURE DIVISION.
        MAIN-PROGRAM          section.
